@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Event.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Message Box.tscn" type="PackedScene" id=2]
+
+[node name="Event" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Message Box" parent="." index="0" instance=ExtResource( 2 )]
+
+display_text = "Howdy! Welcome to the underground!
+I'm Flowey. Flowey the flower! You're new to the underground, aren'tcha? Golly, you must be so confused.
+"
+
+

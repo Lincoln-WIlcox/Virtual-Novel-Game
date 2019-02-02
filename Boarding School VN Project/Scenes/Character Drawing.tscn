@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Character.gd" type="Script" id=1]
+[ext_resource path="res://Assets/VN test pictures/expression 1 green.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Test Anim.tscn" type="PackedScene" id=3]
+
+[node name="Character Drawing" type="Node2D" index="0"]
+
+position = Vector2( 300, 400 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+playerrep = null
+character_name = null
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="Test Anim" parent="." index="1" instance=ExtResource( 3 )]
+
+strength = 2.0
+speed = 20.0
+length = 3.0
+
+

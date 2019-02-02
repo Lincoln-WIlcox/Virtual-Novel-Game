@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Test Anim.gd" type="Script" id=1]
+
+[node name="Test Anim" type="Node"]
+
+script = ExtResource( 1 )
+strength = 0
+speed = 0
+length = 0
+
+[node name="Timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Length" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Length" to="." method="_on_Length_timeout"]
+
+
